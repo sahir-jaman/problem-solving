@@ -1,0 +1,38 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,a[1000],p,q,k,x,y,sum=0;
+    cout<<"Enter your array size : ";
+    cin>>n;
+    cout<<endl<<"Input your array values: ";
+    for(int i=0; i<n; i++)
+    {
+        cin>>a[i];
+
+    }
+    cout<<endl<<"The array looks like: ";
+    for(int i=0; i<n; i++)
+    {
+        cout<<a[i]<<" ";
+    }
+    int T;
+    cout<<endl<<"Enter your test case: ";
+    cin>>T;
+    for(int i=1; i<=T; i++)
+    {
+        cout<<endl<<"Enter your limits (start and end) : ";
+        cin>>p>>q;
+        for(int i=p; i<q; i++)
+        {
+            sum=sum+a[i];
+
+        }
+
+        cout<<endl<<"The require result is:"<<sum;
+        sum=0;
+
+    }
+
+    cout<<endl;
+}
