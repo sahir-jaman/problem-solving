@@ -13,7 +13,7 @@ int main()
    {
        for(int j=0;j<q;j++)
        {
-           cout<<"your value or a["<<i<<"]["<<j<<"] : ";
+           cout<<"your coordinate value a["<<i<<"]["<<j<<"] : ";
            cin>>a[i][j];
        }
 
