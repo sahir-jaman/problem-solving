@@ -1,0 +1,48 @@
+#include<bits/stdc++.h>
+using namespace std;
+int a,b,c,n,m,z,p,q,sum,x1,y1,x2,y2;
+int main()
+
+{
+   cout<<"Enter your row value: ";
+   cin>>p;
+   cout<<"Enter your column value: ";
+   cin>>q;
+   int a[p][q];
+   for(int i=0;i<p;i++)
+   {
+       for(int j=0;j<q;j++)
+       {
+           cout<<"your value or a["<<i<<"]["<<j<<"] : ";
+           cin>>a[i][j];
+       }
+
+   }
+   for(int i=0;i<p;i++)
+   {
+       for(int j=0;j<q;j++)
+       {
+           cout<<a[i][j]<<"  ";
+       }
+           cout<<endl;
+
+   }
+ cout<<"Enter your beginning value :";
+ cin>>x1>>y1;
+ cout<<"Enter your ending value :";
+ cin>>x2>>y2;
+
+for(int i=x1;i<=x2;i++)
+{
+
+    for(int j=y1;j<=y2;j++)
+    {
+
+        sum=sum+(a[i][j]);
+
+    }
+
+}
+cout<<sum;
+
+}
