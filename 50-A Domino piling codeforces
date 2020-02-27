@@ -1,0 +1,9 @@
+#include<bits/stdc++.h>
+using namespace std;
+int n,m,s,p;
+int main()
+{
+    cin>>n>>m;
+    s=(n*m)/(2); // remember according to class 5 mathematics ;
+    cout<<s<<endl;
+}
