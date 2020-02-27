@@ -1,0 +1,50 @@
+#include<bits/stdc++.h>
+using namespace std;
+int ar[5][5];
+int main()
+{
+    int x3=3,y3=3,first_value,second_value;  // x3,y3 is the exact middle position;
+    int x1,y1,output;                        // x1,y1 is the 1's postion in the array;
+
+    for(int row=1;row<=5;row++)
+    {
+        for(int colm=1;colm<=5;colm++)
+        {
+            cin>>ar[row][colm];
+
+        }
+    }
+     for(int row=1;row<=5;row++)
+    {
+        for(int colm=1;colm<=5;colm++)
+        {
+            if(ar[row][colm]==1)
+            {
+                x1=row;
+                y1=colm;
+            }
+
+        }
+    }
+    if(x1>x3)
+    {
+        first_value=x1-x3;
+    }
+    else
+    {
+       first_value=x3-x1;
+    }
+    if(y1>y3)
+    {
+        second_value=y1-y3;
+    }
+    else
+    {
+        second_value=y3-y1;
+
+    }
+    output=first_value + second_value;
+    cout<<output;
+    return 0;
+
+}
