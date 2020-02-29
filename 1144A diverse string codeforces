@@ -1,0 +1,43 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,t,p,q,c=0,d=0;
+    string s;
+    cin>>t;
+    for(int k=0;k<t;k++)
+    {
+
+
+        cin>>s;
+        sort(s.begin(),s.end());
+       for(int i=s.size()-1;i>=0;i--)
+       {
+           if(s[i]-s[i-1]==1)
+           {
+               c++;
+           }
+           else
+           {
+               d++;
+           }
+       }
+       if(c==s.size()-1)
+       {
+           cout<<"Yes"<<endl;
+       }
+       else
+       {
+           cout<<"No"<<endl;
+       }
+       c=0;
+    }
+
+    return 0;
+
+
+
+
+
+
+}
