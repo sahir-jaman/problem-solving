@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int a,b,c,d,e,f,g,h;
+    cin>>a>>b>>c;
+    d=a+b*c;
+    e=a*(b+c);
+    f=(a*b)*c;
+    g=(a+b)*c;
+    h=a+b+c;
+    int ar[5]= {d,e,f,g,h};
+    int p=0;
+
+    for(int i=1; i<=5; i++)
+    {
+        if(ar[i]>p)
+        {
+            p=ar[i];
+        }
+
+    }
+
+    cout<<*max_element (ar,ar+5);
+    return 0;
+}
