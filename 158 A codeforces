@@ -1,0 +1,42 @@
+/// 0 is a corner case. because 0 hole kono particpant er value thake na;
+/// k-th mane holo k tomo position; 1st test case a k-th mane holo middle er 7;
+
+#include<bits/stdc++.h>
+using namespace std;
+int a,b,c,d,e,x,s;
+int main()
+{
+    int n,k;
+    cin>>n>>k;
+    int ar[n];
+    for(int i=0; i<n; i++)
+    {
+        cin>>ar[i];
+ 
+    }
+    s=ar[k-1];
+    for(int i=0; i<n; i++)
+    {
+        if(s==0)
+        {
+            if(ar[i]>s)
+            {
+                c++;
+            }
+        }
+        else
+        {
+ 
+            if(ar[i]>=s)
+            {
+                c++;
+            }
+        }
+ 
+    }
+ 
+    cout<<c;
+ 
+    return 0;
+ 
+}
