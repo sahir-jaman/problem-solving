@@ -1,0 +1,33 @@
+*  প্রথম এ যেকোন জোড় রেখে তারপর যেকোন বিজোড় রাখলে তা আর কখনো তার কোন ডিজিট দারা 
+ভাগ করা যাবে না ।
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int test;
+    cin>>test;
+    while(test--)
+    {
+        int n;
+        cin>>n;
+        if(n==1)
+        {
+            cout<<"-1";
+        }
+        else
+        {
+            n=n-1;
+            cout<<"4";
+            for(int i=1;i<=n;i++)
+            {
+                cout<<"7";
+
+            }
+
+        }
+
+     cout<<endl;
+    }
+    return 0;
+}
