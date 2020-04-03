@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long int  n,m,a;
+    long long int part1,part2,ans;
+    cin>>n>>m>>a;
+    if(n%a!=0)
+    {
+       part1= n/a+1;
+    }
+    else
+    {
+        part1=n/a;
+    }
+    if(m%a!=0)
+    {
+        part2=m/a+1;
+    }
+    else
+    {
+        part2=m/a;
+    }
+
+    ans=part1*part2;
+
+    cout<<ans<<endl;
+
+    return 0;
+}
