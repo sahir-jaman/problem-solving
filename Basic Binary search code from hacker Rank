@@ -1,0 +1,52 @@
+// Link of the code is given below : 
+//   https://www.hackerrank.com/contests/launchpad-1-winter-challenge/challenges/binary-search-basic
+
+
+
+//#include<bits/stdc++.h>
+#include<iostream>
+#include<algorithm>
+
+
+using namespace std;
+
+int my_search(int ar[],int n,int target)
+{
+    int left,right,mid;
+    left=0;
+    right=n-1;
+    while(left<=right)
+    {
+        mid=(left+right)/2;
+        if(ar[mid]==target){
+            return mid;
+        }
+        else if(target>ar[mid]){
+            left=mid+1;
+        }
+        else if(target<ar[mid]){
+                right=mid-1;
+
+        }
+
+    }
+    return -1;
+
+}
+
+
+int main()
+{
+    int n;
+    cin>>n;
+    int target;
+    int ar[n];
+    for(int i=0;i<n;i++)
+    {
+        cin>>ar[i];
+    }
+    cin>>target;
+    sort(ar,ar+n);
+    cout<<my_search(ar,n,target);
+
+}
