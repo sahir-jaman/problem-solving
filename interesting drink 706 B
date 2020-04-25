@@ -1,0 +1,46 @@
+//#include<bits/stdc++.h>
+#include<iostream>
+#include<algorithm>
+#include<vector>
+#include<iterator>
+
+#define pb push_back
+
+
+using namespace std;
+
+int main()
+{
+    int n,c=0;
+    cin>>n;
+    vector<int>v;
+    vector<int>:: iterator it;
+
+    for(int i=0;i<n;i++)
+    {
+        int x;
+        cin>>x;
+        v.pb(x);
+    }
+    sort(v.begin(),v.end());
+    int q;
+    cin>>q;
+   for(int i=0;i<q;i++)
+   {
+        int m;
+        cin>>m;
+        it=upper_bound(v.begin(),v.end(),m);
+        cout<<distance(v.begin(),it);cout<<endl;
+
+        /*
+        here i didn't use lower_bound because
+        here is a corner case which is 55555
+        so, in this case it will output the first value but
+        i need the last value ;
+        That's why i used upper bound here;
+        */
+
+   }
+   return 0;
+
+}
