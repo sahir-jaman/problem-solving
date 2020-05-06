@@ -1,0 +1,49 @@
+// 4C - Registration System codefores 
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    map<string,int>m;
+    map<string,int>:: iterator it;
+    while(n--)
+    {
+        string s;
+        cin>>s;
+        if(m.count(s)==0)
+        {
+            cout<<"OK"<<endl;
+            m[s]++;
+        }
+        else
+        {
+            cout<<s<<m[s]<<endl;
+            // m[s]=m[s]+1;
+            m[s]++;
+        }
+
+    }
+    return 0;
+}
+
+/*// it will also gonna work;
+
+  it = m.find(s);
+
+   if(it=m.end())
+   {
+       cout<<"OK"<<endl;
+       m[s]++;
+   }
+   
+   else
+   {
+    cout<<s<<m[s]<<endl;
+    m[s]=m[s]+1;
+    
+   }
+
+
+*/
