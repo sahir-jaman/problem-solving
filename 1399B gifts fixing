@@ -1,0 +1,38 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    long long t;
+    cin>>t;
+    while(t--)
+    {
+
+        long long n;
+        cin>>n;
+        long long ar[n], br[n];
+        for(int i=0; i<n; i++)
+        {
+            cin>>ar[i];
+
+        }
+        for(int i=0; i<n; i++)
+        {
+
+            cin>>br[i];
+        }
+
+        long long ar_lowest= *min_element(ar,ar+n);
+        long long  br_lowest= *min_element(br,br+n);
+
+
+        long long ans=0;
+
+        for(int i=0; i<n; i++)
+        {
+            ans=ans+max((ar[i]-ar_lowest),(br[i]-br_lowest));
+        }
+        cout<<ans<<endl;
+    }
+    return 0;
+}
