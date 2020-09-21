@@ -1,0 +1,36 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+        long long int N,p1,p2,maxx=0,temp=0,ans=0,player_ans=0,lead1=0,lead2=0;
+        cin>>N;
+        for(int i=1;i<=N;i++)
+        {
+            cin>>p1>>p2;
+            
+            lead1=lead1+p1;      // cumulative scores
+            lead2=lead2+p2;
+            
+            if(lead1>lead2)
+            {
+                ans=lead1-lead2;
+                temp=1;
+            }
+            else
+            {
+                ans=lead2-lead1;
+                temp=2;
+            }
+            if(ans>maxx)
+            {
+                maxx=ans;
+                player_ans=temp;
+            }
+        }
+        cout<<player_ans<<" "<<maxx;
+        maxx=0,temp=0,ans=0,player_ans=0;
+
+    return 0;
+}
