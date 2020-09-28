@@ -1,0 +1,51 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+    vector<int>v;
+    for(int i=0;i<n;i++)
+    {
+        int x;
+        cin>>x;
+        v.push_back(x);
+    }
+    int x=*min_element(v.begin(),v.end());
+    int y=*max_element(v.begin(),v.end());
+
+    for(int i=0;i<n;i++)
+    {
+
+        if(v[i]==y)
+        {
+            y=i;
+            break;
+        }
+    }
+    int x2=0;
+    for(int i=0;i<n;i++)
+    {
+
+        if(v[i]==x)
+        {
+            x2=i;
+
+        }
+    }
+    x2++;
+    y++;
+    //cout<<"x y : "<<x2<<" "<<y<<endl;
+    int p=0;
+    if(y>x2)
+    {
+        p=1;
+    }
+    int cnt=0;
+
+    x2=n-x2;
+    cnt=x2+y-1;
+    cout<<cnt-p<<endl;
+    return 0;
+}
