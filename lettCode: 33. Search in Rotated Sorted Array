@@ -16,7 +16,7 @@ class Solution{
               {
                  if(ar[left]>target)
                  {
-                     left= mid+1;
+                     left= left+1;
                  }
                  else
                  {
@@ -27,7 +27,7 @@ class Solution{
               {
                   if(ar[right]<target)
                   {
-                      right= mid-1;
+                      right= right-1;
                   }
                   else
                   {
